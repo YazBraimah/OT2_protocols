@@ -172,6 +172,7 @@ sample plate to OT-2 when finished.')
         p20.transfer(20, eb, s.top(), new_tip='never')
         p20.aspirate(20, eb)
         p20.move_to(s.center())
+        p20.flow_rate.dispense = 10
         p20.dispense(20, mix_loc)
         p20.mix(5, 10, mix_loc)
         p20.blow_out(s.top(-2))
