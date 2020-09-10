@@ -5,12 +5,10 @@ Clean Up Libraries
 """
 # labware setup
 mag_deck = modules.load('magdeck', '4')
-# mag_plate = labware.load('96-PCR-flat', '4', share=True)
-mag_plate = labware.load('biorad-hardshell-96-PCR', '4', share=True)
-in_plate = labware.load('96-PCR-flat', '5')
-out_plate = labware.load('96-PCR-flat', '1')
-# out_plate = labware.load('biorad-hardshell-96-PCR', '2')
-trough = labware.load('trough-12row', '2')
+mag_plate = labware.load('nest_96_wellplate_100ul_pcr_full_skirt', '4', share=True)
+in_plate = labware.load('nest_96_wellplate_100ul_pcr_full_skirt', '5')
+out_plate = labware.load('nest_96_wellplate_100ul_pcr_full_skirt', '1')
+trough = labware.load('nest_12_reservoir_15ml', '2')
 liquid_trash = trough.wells('A12')
 
 # reagent setup
@@ -18,7 +16,7 @@ rsb = trough.wells('A1')  # resuspension buffer
 beads = trough.wells('A2')  # AMPure XP beads
 ethanol = trough.wells('A3')  # 80% ethanol
 
-tipracks50 = [labware.load('tiprack-200ul', slot) for slot in ['6', '7', '8']]
+tipracks50 = [labware.load('opentrons_96_tiprack_300ul', slot) for slot in ['6', '7', '8']]
 
 # pipette setup
 p50 = instruments.P50_Single(
